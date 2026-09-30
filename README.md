@@ -88,7 +88,7 @@ commonly reported summary and have not been re-derived from the tables. The
 
 ## Origin
 
-Param's note _Big (Writing)_, 22 September 2026, in niwa-vault (spelling tidied):
+From Param's notes, 22 September 2026 (spelling tidied):
 
 > Stop flowing like water, ebbing and flowing to advert campaigns, corp
 > interests, pretending to care about the news cycle because buying in is
@@ -99,4 +99,5 @@ act of protest._
 
 ## Status
 
-Prototype, 30 September 2026. Private.
+Prototype, 30 September 2026. Public under the MIT licence; the two typefaces in
+`fonts/` stay under the SIL Open Font License.
