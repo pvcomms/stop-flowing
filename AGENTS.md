@@ -55,7 +55,7 @@ symptom, so it is recognisable when it happens again.
 | **Local** | `~/work/capp/instruments/stop-flowing` |
 | **GitHub** | [pvcomms/stop-flowing](https://github.com/pvcomms/stop-flowing) |
 | **Live** | — not deployed |
-| **Surface** | private — prototype on GitHub, synthetic crowd |
+| **Surface** | public — prototype on GitHub, synthetic crowd |
 
 A position you drifted into feels like one you hold; only moving the crowd tells them apart.
 
