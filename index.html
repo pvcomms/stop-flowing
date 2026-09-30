@@ -1838,7 +1838,8 @@
       h += `<div class="row"><p class="row-q">${d}</p>${rowSVG(a, b, c, !!c && a === b)}<span class="verdict ${cls}">${v}</span></div>`;
     }
     $("specimen").innerHTML = h;
-    requestAnimationFrame(() => $("specimen").classList.add("drawn"));
+    void $("specimen").offsetWidth;
+    $("specimen").classList.add("drawn");
   }
 
   // ---- I ----
@@ -2159,24 +2160,15 @@
   }
 
   // ---- flow ----
-  let io;
+  // Sections fade in as they open. Nothing waits on scroll position, so nothing can be left invisible.
   function observe(root) {
     const els = root.classList.contains("reveal")
       ? [root]
       : [...root.querySelectorAll(".reveal")];
-    if (!io) {
-      io = new IntersectionObserver(
-        (es) =>
-          es.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("in");
-              io.unobserve(e.target);
-            }
-          }),
-        { threshold: 0, rootMargin: "0px 0px -8% 0px" },
-      );
-    }
-    els.forEach((el) => io.observe(el));
+    els.forEach((el) => {
+      void el.offsetWidth; // commit the hidden state so the transition runs
+      el.classList.add("in");
+    });
   }
   function open(id) {
     const el = $(id);
